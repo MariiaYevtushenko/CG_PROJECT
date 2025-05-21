@@ -589,8 +589,7 @@ const test3 = {
 };
 
 
-
-const testsMap = new Map();
-testsMap.set("test1", test1);
-testsMap.set("test2", test2);
-testsMap.set("test3", test3);
+const TESTS_MAP = new Map();
+TESTS_MAP.set("test1", test1);
+TESTS_MAP.set("test2", test2);
+TESTS_MAP.set("test3", test3);

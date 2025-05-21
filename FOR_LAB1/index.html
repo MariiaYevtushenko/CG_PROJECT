@@ -11,16 +11,21 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Game LAB 1</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="custom.css">
-    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/custom.css">
+    <link rel="stylesheet" href="css/main.css">
 </head>
 
 <body>
     <header>
-        <h1>Завдання до ТЕМИ 1</h1>
+       
+        <h1 onclick="goHome()" class="back-home">Векторна графіка. Canvas</h1>
     </header>
+ 
     <main>
+            <div class="back-button-container">
+    <button class="button back-button" onclick="goHome()"> ⬅ Головне меню </button>
+</div>
        <div class="work-area">
         <div id="tests-container-header">
             Завдання
@@ -89,11 +94,15 @@
         </div>
        </div>
 
+       <div class="hamster-run-container">
+       <img src="animation/hamster.gif" alt="hamster" id="hamster-gif">
+       </div>
 
     </main>
 
 
 </body>
-<script src="main.js"></script>
+<script src="js/main.js"></script>
+<script src="js/goHome.js"></script>
 
 </html>

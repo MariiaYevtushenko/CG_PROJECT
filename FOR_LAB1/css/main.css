@@ -10,16 +10,51 @@
     --middle-grey:  #a7a7a7;
 }
 
-main{
+.back-button-container {
+    display: flex;
+   
+    padding: 10px;
+    justify-self: end;
+    padding-right: 40px;
+}
+
+body {
+    display: grid;
+   
+    height: 100vh;
+    width: 100%;
+    margin: 0;
+}
+#hamster-gif{
+    height: 124px;
+    width: 124px;
+}
+
+.hamster-run-container{
+    display: flex;
+   
     justify-content: center;
-    align-items: center;
+   align-self: flex-end;
+    align-items: end;
+    padding-bottom: 40px;
+}
+
+main{
+  grid-template-columns: 1fr 3fr 1fr ; /* 2 колонки: ширина кнопки і решта для work-area */
+  display: grid;
+  width: 100%;
+    align-items: flex-start;
+    
+   flex-direction: row;
 }
 
 .work-area{
+   
+    align-self: center;
     display: flex;
     flex-direction: column;
-    height: 90vh;
-    width: 60%;
+    height: 86vh;
+  
    padding: 20px;
    box-shadow: 
    20px 0 10px -5px var(--light),  /* праворуч */
@@ -51,6 +86,10 @@ padding-left: 24px;
     box-shadow: 2px 2px 8px 0px var(--grey);
    
    margin: 0;
+}
+
+.back-home{
+    cursor: pointer;
 }
 
 .task-game:hover{

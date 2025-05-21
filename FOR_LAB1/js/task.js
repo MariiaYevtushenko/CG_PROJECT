@@ -1,136 +1,41 @@
-// const test1 = {
-//   id: "test-1",
-//   title: "Тест 1: Визначення правильного коду для малювання фігур",
-//   description:
-//     "Оберіть правильний варіант коду, який відповідає зображенню на канві.",
-//   questions: [
-//     {
-//       id: "1",
-//       question:
-//         "Який варіант коду правильно малює фігуру? <br> (значення STEP відповідає розміру однієї клітинки)",
-//       options: [
-//         {
-//           code: `c.fillRect( STEP*3, canvas.height-STEP*5, STEP*4, STEP*3);`,
-//           correct: true,
-//         },
-//         {
-//           code: `c.fillRect( STEP*4, canvas.height-STEP*3, STEP*4, STEP*4);`,
-//           correct: false,
-//         },
-//         {
-//           code: `c.strokeRect( STEP*3, canvas.height-STEP*5, STEP*4, STEP*4);`,
-//           correct: false,
-//         },
-//         {
-//           code: `c.fillRect( STEP*3, canvas.height-STEP*5, STEP*2, STEP*2);`,
-//           correct: false,
-//         },
-//       ],
-//     },
-//     {
-//       id: "2",
-//       question:
-//         "Який варіант коду правильно малює вузький вертикальний прямокутник?",
-//       options: [
-//         {
-//           code: `c.fillRect(STEP*4, canvas.height - STEP*2, STEP, STEP*2);`,
-//           correct: false,
-//         },
-//         {
-//           code: `c.fillRect(STEP*3, canvas.height - STEP*4, STEP, STEP*2);`,
-//           correct: false,
-//         },
-//         {
-//           code: `c.fillRect(STEP*4, canvas.height - STEP*4, STEP*2, STEP);`,
-//           correct: false,
-//         },
-//         {
-//           code: `c.fillRect(STEP*4, canvas.height - STEP*4, STEP, STEP*2);`,
-//           correct: true,
-//         },
-//       ],
-//     },
-//     {
-//       id: "3",
-//       question: "Який код правильно малює маленький квадрат для вікна?",
-//       options: [
-//         {
-//           code: `c.fillRect(STEP*5, canvas.height - STEP*4, STEP*2, STEP);`,
-//           correct: false,
-//         },
-//         {
-//           code: `c.fillRect(STEP*5.5, canvas.height - STEP*4, STEP, STEP);`,
-//           correct: true,
-//         },
-//         {
-//           code: `c.fillRect(STEP*6, canvas.height - STEP*4, STEP, STEP*2);`,
-//           correct: false,
-//         },
-//         {
-//           code: `c.fillRect(STEP*5.5, canvas.height - STEP*5, STEP, STEP);`,
-//           correct: false,
-//         },
-//       ],
-//     },
-//     {
-//       id: "4",
-//       question:
-//         "Який код малює горизонтальний прямокутник для зображення трави?",
-//       options: [
-//         {
-//           code: `c.fillRect(0, canvas.height - STEP*2, canvas.width, STEP*2);`,
-//           correct: false,
-//         },
-//         {
-//           code: `c.fillRect(0, canvas.height - STEP*3, canvas.width, STEP);`,
-//           correct: false,
-//         },
-//         {
-//           code: `c.fillRect(0, canvas.height - STEP*2, STEP*3, STEP);`,
-//           correct: false,
-//         },
-//         {
-//           code: `c.fillRect(0, canvas.height - STEP*2, canvas.width, STEP);`,
-//           correct: true,
-//         },
-//       ],
-//     },
-//     {
-//       id: "5",
-//       question: "Який код малює трикутний-дах коричневого кольору?",
-//       options: [
-//         {
-//           code: `c.beginPath();<br>
-//   c.moveTo(STEP*2, canvas.height-STEP*6);<br>
-//   c.lineTo(STEP*5, canvas.height-STEP*8);<br>
-//   c.lineTo(STEP*8, canvas.height-STEP*6);<br>
-//   c.closePath();<br>
-//   c.fillStyle = "#a52a2a";<br>
-//   c.fill();<br> `,
-//           correct: false,
-//         },
-//         {
-//           code: `c.fillRect(STEP*5, canvas.height-STEP*7, STEP*2, STEP*2);`,
-//           correct: false,
-//         },
-//         {
-//           code: `c.beginPath();<br>
-//   c.moveTo(STEP*2, canvas.height-STEP*5);<br>
-//   c.lineTo(STEP*5, canvas.height-STEP*7);<br>
-//   c.lineTo(STEP*8, canvas.height-STEP*5);<br>
-//   c.closePath();<br>
-//   c.fillStyle = "#a52a2a";<br>
-//   c.fill();<br> `,
-//           correct: true,
-//         },
-//         {
-//           code: `c.strokeRect(STEP*2, canvas.height-STEP*5, STEP*6, STEP*2);`,
-//           correct: false,
-//         },
-//       ],
-//     },
-//   ],
-// };
+
+
+function drawPartTest1(step) {
+  switch (step) {
+    case 0:
+      // Стіни
+      c.fillStyle = "#d3d3d3";
+      c.fillRect(STEP * 3, canvas.height - STEP * 5, STEP * 4, STEP * 3);
+      break;
+    case 1:
+      // Двері
+      c.fillStyle = "#654321";
+      c.fillRect(STEP * 4, canvas.height - STEP * 4, STEP, STEP * 2);
+      break;
+    case 2:
+      // Вікно
+      c.fillStyle = "#87ceeb";
+      c.fillRect(STEP * 5.5, canvas.height - STEP * 4, STEP, STEP);
+      break;
+    case 3:
+      // Трава
+      c.fillStyle = "green";
+      c.fillRect(0, canvas.height - STEP * 2, canvas.width, STEP);
+      break;
+    case 4:
+      // Дах
+      c.beginPath();
+      c.moveTo(STEP * 2, canvas.height - STEP * 5);
+      c.lineTo(STEP * 5, canvas.height - STEP * 7);
+      c.lineTo(STEP * 8, canvas.height - STEP * 5);
+      c.closePath();
+      c.fillStyle = "#a52a2a";
+      c.fill();
+      break;
+    default:
+      break;
+  }
+}
 
 function drawPartTest2(step) {
   switch (step) {
@@ -224,44 +129,6 @@ console.log("Draw test 2 step 1");
   }
 }
 
-function drawPartTest1(step) {
-  switch (step) {
-    case 0:
-      // Стіни
-      c.fillStyle = "#d3d3d3";
-      c.fillRect(STEP * 3, canvas.height - STEP * 5, STEP * 4, STEP * 3);
-      break;
-    case 1:
-      // Двері
-      c.fillStyle = "#654321";
-      c.fillRect(STEP * 4, canvas.height - STEP * 4, STEP, STEP * 2);
-      break;
-    case 2:
-      // Вікно
-      c.fillStyle = "#87ceeb";
-      c.fillRect(STEP * 5.5, canvas.height - STEP * 4, STEP, STEP);
-      break;
-    case 3:
-      // Трава
-      c.fillStyle = "green";
-      c.fillRect(0, canvas.height - STEP * 2, canvas.width, STEP);
-      break;
-    case 4:
-      // Дах
-      c.beginPath();
-      c.moveTo(STEP * 2, canvas.height - STEP * 5);
-      c.lineTo(STEP * 5, canvas.height - STEP * 7);
-      c.lineTo(STEP * 8, canvas.height - STEP * 5);
-      c.closePath();
-      c.fillStyle = "#a52a2a";
-      c.fill();
-      break;
-    default:
-      break;
-  }
-}
-
-
 function drawPartTest3(step){
 switch(step){
   case 0:
@@ -345,39 +212,43 @@ function DrawPartTest(testName, step){
   }
 }
 
+
+
+
+
 let CORRECT_ANSWER_COUNT = 0;
 let CURRENT_TASK = 0;
-let lives = 3;
+let MAX_LIVES = 3;
 
-let seconds = 0;
-let timerId = null;
-const timer = document.getElementById("timer");
+let SECONDS = 0;
+let TIMER_ID = null;
+const TIMER = document.getElementById("timer");
 
 document.getElementById("results-container-wrap").style.display = "none";
 const nextBtn = document.getElementById("btn-next-task");
 document.getElementById("retry-btn").style.display = "none";
 document.getElementById("btn-next-task").style.display = "none";
 
-function startQuiz(selectedTest) {
+function StartQuiz(selectedTest) {
   document.getElementById("task-container").style.display = "block";
   document.getElementById("results-container-wrap").style.display = "none";
   document.getElementById("btn-next-task").textContent = "Наступне питання";
-  //ReDrawBoard();
-   c.clearRect(0, 0, canvas.width, canvas.height);
+  ReDrawBoard();
+   //c.clearRect(0, 0, canvas.width, canvas.height);
 
-  seconds = 0;
-  if (timerId === null) {
+  SECONDS = 0;
+  if (TIMER_ID === null) {
     startTimer();
   }
   CORRECT_ANSWER_COUNT = 0;
   CURRENT_TASK = 0;
-  lives = 3;
+  MAX_LIVES = 3;
 
-  renderTask(selectedTest, CURRENT_TASK);
+  RenderTask(selectedTest, CURRENT_TASK);
   DrawPartTest(testName, CURRENT_TASK);
 }
 
-function shuffle(array) {
+function RandomeMix(array) {
   for (let i = array.length - 1; i > 0; i--) {
     const j = Math.floor(Math.random() * (i + 1));
     [array[i], array[j]] = [array[j], array[i]];
@@ -385,7 +256,7 @@ function shuffle(array) {
   return array;
 }
 
-function renderTask(test, taskIndex) {
+function RenderTask(test, taskIndex) {
   const task = selectedTest.questions[taskIndex];
 
   const taskDiv = document.getElementById("task");
@@ -397,7 +268,7 @@ function renderTask(test, taskIndex) {
   const container = taskDiv.querySelector("div");
   container.innerHTML = ""; // очищення попередніх варіантів
 
-  const optionsShuffled = shuffle([...task.options]);
+  const optionsShuffled = RandomeMix([...task.options]);
 
 //task.options.forEach((opt) => {
   optionsShuffled.forEach((opt) => {
@@ -451,10 +322,10 @@ document.getElementById("action-btn").addEventListener("click", () => {
     checkBtn.style.display = "none";
     // nextStep(); // Переходимо далі
   } else {
-    lives--;
-    if (lives > 0) {
-      feedbackDiv.innerHTML = `❌ Помилка! У тебе залишилось ${lives} ${getLivesText(
-        lives
+    MAX_LIVES--;
+    if (MAX_LIVES > 0) {
+      feedbackDiv.innerHTML = `❌ Помилка! У тебе залишилось ${MAX_LIVES} ${GetLivesText(
+        MAX_LIVES
       )}.`;
       retryBtn.style.display = "block";
       checkBtn.style.display = "none";
@@ -467,7 +338,7 @@ document.getElementById("action-btn").addEventListener("click", () => {
   }
 });
 
-function retryTask() {
+function RetryTask() {
   const inputs = document.querySelectorAll(`#task input[type=radio]`);
   inputs.forEach((inp) => (inp.checked = false));
 
@@ -481,24 +352,24 @@ function retryTask() {
   document.getElementById("action-btn").style.display = "block";
 }
 
-function nextStep() {
+function NextStep() {
   document.getElementById("btn-next-task").style.display = "none";
   document.getElementById("action-btn").style.display = "block";
   document.getElementById("feedback").innerHTML = "";
 
   CURRENT_TASK++;
 
-  if (CURRENT_TASK >= selectedTest.questions.length || lives == 0) {
+  if (CURRENT_TASK >= selectedTest.questions.length || MAX_LIVES == 0) {
     stopTimer();
-    const timeStr = timer.textContent;
+    const timeStr = TIMER.textContent;
     showResults(
       CORRECT_ANSWER_COUNT,
-      3 - lives,
+      3 - MAX_LIVES,
       selectedTest.questions.length,
       timeStr
     );
   } else {
-    renderTask(selectedTest, CURRENT_TASK);
+    RenderTask(selectedTest, CURRENT_TASK);
   }
 
   if (CURRENT_TASK == selectedTest.questions.length - 1) {
@@ -509,13 +380,11 @@ function nextStep() {
    DrawPartTest(testName, CURRENT_TASK);
 }
 
-function getLivesText(num) {
+function GetLivesText(num) {
   if (num === 1) return "життя";
   if (num === 2 || num === 3 || num === 4) return "життя";
   return "життів";
 }
-
-
 
 function showResults(correctCount, errorCount, totalCount, timeStr) {
   const resultsContainer = document.getElementById("results-container");
@@ -531,7 +400,7 @@ function showResults(correctCount, errorCount, totalCount, timeStr) {
 
   var percentScore = 100;
 
-  if (lives != 3) {
+  if (MAX_LIVES != 3) {
     if (correctCount < totalCount) {
       percentScore = (correctCount / totalCount) * 100;
     }
@@ -609,42 +478,42 @@ function timeStringToSeconds(timeStr) {
 }
 
 function updateTimer() {
-  seconds++;
+  SECONDS++;
 
-  let hrs = Math.floor(seconds / 3600);
-  let mins = Math.floor((seconds % 3600) / 60);
-  let secs = seconds % 60;
+  let hrs = Math.floor(SECONDS / 3600);
+  let mins = Math.floor((SECONDS % 3600) / 60);
+  let secs = SECONDS % 60;
 
   // Форматування з провідними нулями
   const format = (num) => num.toString().padStart(2, "0");
 
-  timer.textContent = `${format(mins)}:${format(secs)}`;
+  TIMER.textContent = `${format(mins)}:${format(secs)}`;
 }
 
 function startTimer() {
-  seconds = 0;
-  timer.textContent = `00:00`;
+  SECONDS = 0;
+  TIMER.textContent = `00:00`;
 
-  timerId = setInterval(updateTimer, 1000);
+  TIMER_ID = setInterval(updateTimer, 1000);
 }
 
 function stopTimer() {
-  if (timerId !== null) {
-    clearInterval(timerId);
-    timerId = null;
+  if (TIMER_ID !== null) {
+    clearInterval(TIMER_ID);
+    TIMER_ID = null;
   }
 }
 
 const params = new URLSearchParams(window.location.search);
 const testName = params.get("test");
 
-const selectedTest = testsMap.get(testName);
+const selectedTest = TESTS_MAP.get(testName);
 console.log("test NAME = " + testName);
 
 
 if (selectedTest) {
-  // Використай selectedTest далі
-  startQuiz(selectedTest); // передай його у свою логіку
+  
+  StartQuiz(selectedTest); // передай його у свою логіку
 } else {
   alert("Тест не знайдено.");
 }
