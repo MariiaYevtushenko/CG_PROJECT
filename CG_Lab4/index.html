@@ -13,41 +13,52 @@
 
 <body>
     <header class="page-header" id="page-header">
-        <h1>Моделі кольорів</h1>
+        <h1 onclick="goHome()">Моделі кольорів </h1>
     </header>
 
     <main>
-        <div class="canvas-container">
-            <div class="canvas-model-type">
-                <label class="file-upload">
-                    📁 Завантажити
-                    <input type="file" id="upload-file" accept="image/*" style="display: none" />
-                </label>
+       
 
-                <button class="save-button" onclick="SavePhoto(1)">
-                    💾 Зберегти фото
-                </button>
-            </div>
-            <canvas id="canvas-parent"></canvas>
+        <div class="main-canvases-container">
+ <div class="back-button-container">
+            <button class="button back-button" onclick="goHome()"> ⬅ Головне меню </button>
         </div>
-        <div class="canvas-container">
-            <div class="canvas-model-type">
-                <button class="save-button" onclick="SavePhoto(2)">
-                    📥 Зберегти файл
-                </button>
 
-                <button class="save-button" onclick="SaveVersion()">
-                    📝 Зберегти зміни
-                </button>
+            <div class="canvas-container">
+                <div class="canvas-model-type">
+                    <label class="file-upload">
+                        📁 Завантажити
+                        <input type="file" id="upload-file" accept="image/*" style="display: none" />
+                    </label>
 
-                <button class="save-button" onclick="DiscardChanges()">
-                    ♻️Скасувати все
-                </button>
-
+                    <button class="save-button" onclick="SavePhoto(1)">
+                        💾 Зберегти фото
+                    </button>
+                </div>
+                <canvas id="canvas-parent"></canvas>
             </div>
-            <canvas id="canvas-child"></canvas>
-            <canvas id="magnifier"></canvas>
+            <div class="canvas-container">
+                <div class="canvas-model-type">
+                    <button class="save-button" onclick="SavePhoto(2)">
+                        📥 Зберегти файл
+                    </button>
+
+                    <button class="save-button" onclick="SaveVersion()">
+                        📝 Зберегти зміни
+                    </button>
+
+                    <button class="save-button" onclick="DiscardChanges()">
+                        ♻️Скасувати все
+                    </button>
+
+                </div>
+                <canvas id="canvas-child"></canvas>
+                <canvas id="magnifier"></canvas>
+            </div>
         </div>
+
+
+
 
         <div>
             <div id="colorDisplay">Натисніть на канву</div>
@@ -217,13 +228,17 @@
                             </div>
 
                             <div id="presets">
-                               
+
                                 <button data-hue="0" class="hue-buttons " style="background-color: red;">Red</button>
-                                <button data-hue="120" class="hue-buttons" style="background-color: green;">Green</button>
-                                 <button data-hue="240" class="hue-buttons" style="background-color: blue;">Blue</button>
-                                <button data-hue="180" class="hue-buttons contrast" style="background-color: cyan;">Cyan</button>
-                                <button data-hue="300" class="hue-buttons" style="background-color: magenta;">Magenta</button>
-                                 <button data-hue="60" class="hue-buttons contrast" style="background-color: yellow;">Yellow</button>
+                                <button data-hue="120" class="hue-buttons"
+                                    style="background-color: green;">Green</button>
+                                <button data-hue="240" class="hue-buttons" style="background-color: blue;">Blue</button>
+                                <button data-hue="180" class="hue-buttons contrast"
+                                    style="background-color: cyan;">Cyan</button>
+                                <button data-hue="300" class="hue-buttons"
+                                    style="background-color: magenta;">Magenta</button>
+                                <button data-hue="60" class="hue-buttons contrast"
+                                    style="background-color: yellow;">Yellow</button>
                             </div>
 
 
@@ -296,5 +311,6 @@
 <script src="color_picker.js"></script>
 <script src="color_palette.js"></script>
 <script src="selected_modify.js"></script>
+<script src="goHome.js"></script>
 
 </html>
