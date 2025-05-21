@@ -14,8 +14,16 @@
     display: flex;
    
     padding: 10px;
+    padding-right: 0;
     justify-self: end;
-    padding-right: 40px;
+   
+}
+
+.back-button{
+    border-radius: 8px 0px 0px 8px;
+    width: 200px;
+    text-align: left;
+
 }
 
 body {
@@ -57,8 +65,8 @@ main{
   
    padding: 20px;
    box-shadow: 
-   20px 0 10px -5px var(--light),  /* праворуч */
-   -20px 0 10px -5px var(--light); /* ліворуч */
+   20px 0 100px -5px var(--light),  /* праворуч */
+   -20px 0 100px -5px var(--light); /* ліворуч */
 
 
 }
